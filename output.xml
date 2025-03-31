@@ -1,300 +1,2541 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-06-21T18:24:11.260286" rpa="false" schemaversion="5">
-<suite id="s1" name="Po" source="d:\meusProjetos\Iterasys\blazedemo\test\web\po">
-<kw name="Obter Data e Hora" owner="base_page" type="SETUP">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-30T19:56:01.938234" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/cahernandezv/Downloads/blazedemo/test">
+<suite id="s1-s1" name="Web" source="/Users/cahernandezv/Downloads/blazedemo/test/web">
+<suite id="s1-s1-s1" name="Po" source="/Users/cahernandezv/Downloads/blazedemo/test/web/po">
+<kw name="Obtener fecha y hora" owner="base_page" type="SETUP">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-06-21T18:24:11.551287" level="INFO">${date} = 2024-06-21 18:24:11.551</msg>
+<msg time="2025-03-30T19:56:01.987460" level="INFO">${date} = 2025-03-30 19:56:01.987</msg>
 <var>${date}</var>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-06-21T18:24:11.551287" elapsed="0.003002"/>
+<status status="PASS" start="2025-03-30T19:56:01.987378" elapsed="0.000098"/>
 </kw>
 <kw name="Convert Date" owner="DateTime">
-<msg time="2024-06-21T18:24:11.561287" level="INFO">${date} = 2024.06.21_18.24.11</msg>
+<msg time="2025-03-30T19:56:01.989388" level="INFO">${date} = 2025.03.30_19.56.01</msg>
 <var>${date}</var>
 <arg>${date}</arg>
 <arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
 <doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-06-21T18:24:11.554289" elapsed="0.006998"/>
+<status status="PASS" start="2025-03-30T19:56:01.987526" elapsed="0.001881"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-06-21T18:24:11.562289" level="INFO">${date} = 2024.06.21_18.24.11</msg>
-<msg time="2024-06-21T18:24:11.562289" level="INFO">${date} = None</msg>
+<msg time="2025-03-30T19:56:01.989588" level="INFO">${date} = 2025.03.30_19.56.01</msg>
+<msg time="2025-03-30T19:56:01.989609" level="INFO">${date} = None</msg>
 <var>${date}</var>
 <arg>${date}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-06-21T18:24:11.561287" elapsed="0.001002"/>
+<status status="PASS" start="2025-03-30T19:56:01.989502" elapsed="0.000114"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:11.550288" elapsed="0.012001"/>
+<status status="PASS" start="2025-03-30T19:56:01.987131" elapsed="0.002513"/>
 </kw>
-<suite id="s1-s1" name="Comprar Passagem Po" source="d:\meusProjetos\Iterasys\blazedemo\test\web\po\comprar_passagem_po.robot">
-<test id="s1-s1-t1" name="Comprar Passagem" line="6">
+<suite id="s1-s1-s1-s1" name="Comprar Ticket Po" source="/Users/cahernandezv/Downloads/blazedemo/test/web/po/comprar_ticket_po.robot">
+<test id="s1-s1-s1-s1-t1" name="Comprar Tiquete" line="6">
 <kw name="Abrir navegador" owner="base_page" type="SETUP">
 <kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:11.591289" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
+<msg time="2025-03-30T19:56:01.991140" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
 <doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-06-21T18:24:11.590287" elapsed="0.001002"/>
+<status status="PASS" start="2025-03-30T19:56:01.991082" elapsed="0.000075"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:11.591289" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<msg time="2025-03-30T19:56:01.991292" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-21T18:24:11.591289" elapsed="2.901278"/>
+<status status="PASS" start="2025-03-30T19:56:01.991203" elapsed="1.573494"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.493566" elapsed="0.045003"/>
+<status status="PASS" start="2025-03-30T19:56:03.565107" elapsed="0.378442"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>8000ms</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.538569" elapsed="0.001998"/>
+<status status="PASS" start="2025-03-30T19:56:03.943687" elapsed="0.000579"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>css=h1</arg>
 <arg>Welcome to the Simple Travel Agency!</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.541571" elapsed="0.043997"/>
+<status status="PASS" start="2025-03-30T19:56:03.944334" elapsed="0.011667"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:11.589287" elapsed="2.997280"/>
+<status status="PASS" start="2025-03-30T19:56:01.990998" elapsed="1.965105"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Tomar Screenshot" owner="base_page">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:14.744564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-21T18:24:14.744564" level="INFO">d:\meusProjetos\Iterasys\blazedemo\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+<msg time="2025-03-30T19:56:04.152584" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T19:56:04.152650" level="INFO">/Users/cahernandezv/Downloads/blazedemo/robot-env/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:994: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
   return self.get_screenshot_as_file(filename)</msg>
 <arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.588564" elapsed="0.163002"/>
+<status status="PASS" start="2025-03-30T19:56:03.956490" elapsed="0.196205"/>
 </kw>
 <arg>1_Welcome</arg>
-<status status="PASS" start="2024-06-21T18:24:14.587567" elapsed="0.163999"/>
+<status status="PASS" start="2025-03-30T19:56:03.956305" elapsed="0.196464"/>
 </kw>
-<kw name="Escolher a cidade de partida" owner="welcome_page">
+<kw name="Escoger ciudad de origen" owner="welcome_page">
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:14.753565" level="INFO">Selecting options from selection list 'name=fromPort' by value Paris.</msg>
-<arg>${select_from_port}</arg>
-<arg>${city_from_port}</arg>
+<msg time="2025-03-30T19:56:04.153416" level="INFO">Selecting options from selection list 'name=fromPort' by value Paris.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.752565" elapsed="0.055000"/>
+<status status="PASS" start="2025-03-30T19:56:04.153022" elapsed="0.014447"/>
 </kw>
 <arg>Paris</arg>
-<status status="PASS" start="2024-06-21T18:24:14.752565" elapsed="0.055000"/>
+<status status="PASS" start="2025-03-30T19:56:04.152892" elapsed="0.014631"/>
 </kw>
-<kw name="Escolher a cidade de destino" owner="welcome_page">
+<kw name="Escoger ciudad de destino" owner="welcome_page">
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:14.809566" level="INFO">Selecting options from selection list 'name=toPort' by value Rome.</msg>
-<arg>${select_to_port}</arg>
-<arg>${city_to_port}</arg>
+<msg time="2025-03-30T19:56:04.167834" level="INFO">Selecting options from selection list 'name=toPort' by value Rome.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.808565" elapsed="0.081001"/>
+<status status="PASS" start="2025-03-30T19:56:04.167748" elapsed="0.021900"/>
 </kw>
 <arg>Rome</arg>
-<status status="PASS" start="2024-06-21T18:24:14.808565" elapsed="0.081001"/>
+<status status="PASS" start="2025-03-30T19:56:04.167633" elapsed="0.022112"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Tomar Screenshot" owner="base_page">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:15.023564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/2_Cidades%20Escolhidas.jpg"&gt;&lt;img src="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/2_Cidades%20Escolhidas.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T19:56:04.373598" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-21T18:24:14.894567" elapsed="0.129996"/>
+<status status="PASS" start="2025-03-30T19:56:04.190008" elapsed="0.183636"/>
 </kw>
-<arg>2_Cidades Escolhidas</arg>
-<status status="PASS" start="2024-06-21T18:24:14.893570" elapsed="0.130993"/>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:04.189884" elapsed="0.183812"/>
 </kw>
-<kw name="Clicar botao Find Flights" owner="welcome_page">
+<kw name="Click en boton Find Flights" owner="welcome_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:15.026566" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<msg time="2025-03-30T19:56:04.373976" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
 <arg>${bton_find_flights}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:15.025565" elapsed="0.443999"/>
+<status status="PASS" start="2025-03-30T19:56:04.373902" elapsed="0.231101"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:15.025565" elapsed="0.443999"/>
+<status status="PASS" start="2025-03-30T19:56:04.373799" elapsed="0.231598"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:15.471567" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg time="2024-06-21T18:24:15.477565" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from Paris to Rome:'.</msg>
-<arg>${titulo_secao_choose}</arg>
+<msg time="2025-03-30T19:56:04.606388" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from Paris to Rome:'.</msg>
+<arg>${title_choose}</arg>
 <arg>Flights from Paris to Rome:</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-21T18:24:15.471567" elapsed="0.047999"/>
+<status status="PASS" start="2025-03-30T19:56:04.605855" elapsed="0.027455"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Tomar Screenshot" owner="base_page">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:15.676563" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/3_Escolha%20o%20voo.jpg"&gt;&lt;img src="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/3_Escolha%20o%20voo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T19:56:04.831448" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-21T18:24:15.523569" elapsed="0.152994"/>
+<status status="PASS" start="2025-03-30T19:56:04.633709" elapsed="0.197788"/>
 </kw>
-<arg>3_Escolha o voo</arg>
-<status status="PASS" start="2024-06-21T18:24:15.522571" elapsed="0.153992"/>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:04.633513" elapsed="0.198029"/>
 </kw>
-<kw name="Clicar no botao Choose This Flight" owner="choose_voo_page">
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:15.678564" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<msg time="2025-03-30T19:56:04.831858" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
 <arg>${btn_choose}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:15.678564" elapsed="0.410001"/>
+<status status="PASS" start="2025-03-30T19:56:04.831786" elapsed="0.293495"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:15.677565" elapsed="0.411000"/>
+<status status="PASS" start="2025-03-30T19:56:04.831644" elapsed="0.293843"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Tomar Screenshot" owner="base_page">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.271563" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/4_Preencher%20os%20dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/4_Preencher%20os%20dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T19:56:05.367746" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.094565" elapsed="0.176998"/>
+<status status="PASS" start="2025-03-30T19:56:05.126639" elapsed="0.241155"/>
 </kw>
-<arg>4_Preencher os dados da reserva</arg>
-<status status="PASS" start="2024-06-21T18:24:16.093565" elapsed="0.177998"/>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:05.126149" elapsed="0.241690"/>
 </kw>
-<kw name="Preencher o campo Name" owner="reserved_page">
+<kw name="completar el campo Name" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.274567" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<msg time="2025-03-30T19:56:05.368131" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
 <arg>${txt_name}</arg>
 <arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.273567" elapsed="0.104999"/>
+<status status="PASS" start="2025-03-30T19:56:05.368059" elapsed="0.077546"/>
 </kw>
 <arg>Silvia</arg>
-<status status="PASS" start="2024-06-21T18:24:16.272564" elapsed="0.106002"/>
+<status status="PASS" start="2025-03-30T19:56:05.367939" elapsed="0.077727"/>
 </kw>
-<kw name="Preencher o campo Address" owner="reserved_page">
+<kw name="completar el campo Address" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.382568" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<msg time="2025-03-30T19:56:05.445996" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
 <arg>${txt_address}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.382568" elapsed="0.123997"/>
+<status status="PASS" start="2025-03-30T19:56:05.445912" elapsed="0.024130"/>
 </kw>
 <arg>Rua Principal, 123</arg>
-<status status="PASS" start="2024-06-21T18:24:16.381568" elapsed="0.125998"/>
+<status status="PASS" start="2025-03-30T19:56:05.445780" elapsed="0.024316"/>
 </kw>
-<kw name="Preencher o campo City" owner="reserved_page">
+<kw name="completar el campo City" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.511565" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<msg time="2025-03-30T19:56:05.470400" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
 <arg>${txt_city}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.511565" elapsed="0.130173"/>
+<status status="PASS" start="2025-03-30T19:56:05.470326" elapsed="0.027219"/>
 </kw>
 <arg>New City</arg>
-<status status="PASS" start="2024-06-21T18:24:16.510565" elapsed="0.131173"/>
+<status status="PASS" start="2025-03-30T19:56:05.470203" elapsed="0.027404"/>
 </kw>
-<kw name="Preencher o campo State" owner="reserved_page">
+<kw name="completar el campo State" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.647143" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<msg time="2025-03-30T19:56:05.497929" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
 <arg>${txt_state}</arg>
 <arg>${state}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.646133" elapsed="0.158817"/>
+<status status="PASS" start="2025-03-30T19:56:05.497841" elapsed="0.043640"/>
 </kw>
 <arg>Espírito Santo</arg>
-<status status="PASS" start="2024-06-21T18:24:16.645070" elapsed="0.159880"/>
+<status status="PASS" start="2025-03-30T19:56:05.497722" elapsed="0.043813"/>
 </kw>
-<kw name="Preencher o campo Zip Code" owner="reserved_page">
+<kw name="completar el campo Zip Code" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.809310" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<msg time="2025-03-30T19:56:05.541999" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
 <arg>${txt_zipCode}</arg>
 <arg>${zip_code}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.809310" elapsed="0.097014"/>
+<status status="PASS" start="2025-03-30T19:56:05.541888" elapsed="0.022940"/>
 </kw>
 <arg>29000000</arg>
-<status status="PASS" start="2024-06-21T18:24:16.808801" elapsed="0.097523"/>
+<status status="PASS" start="2025-03-30T19:56:05.541656" elapsed="0.023228"/>
 </kw>
-<kw name="Preencher o campo Credit Card Number" owner="reserved_page">
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:16.914264" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<msg time="2025-03-30T19:56:05.565209" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
 <arg>${txt_creditCardNumber}</arg>
 <arg>${credit_card_number}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:16.913254" elapsed="0.095957"/>
+<status status="PASS" start="2025-03-30T19:56:05.565128" elapsed="0.021196"/>
 </kw>
 <arg>10000000001</arg>
-<status status="PASS" start="2024-06-21T18:24:16.912730" elapsed="0.096481"/>
+<status status="PASS" start="2025-03-30T19:56:05.564997" elapsed="0.021386"/>
 </kw>
-<kw name="Preencher o campo Name on Card" owner="reserved_page">
+<kw name="completar el campo Name on Card" owner="reserved_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:17.011210" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<msg time="2025-03-30T19:56:05.586714" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
 <arg>${txt_nameOnCard}</arg>
 <arg>${name_on_card}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:17.011210" elapsed="0.112999"/>
+<status status="PASS" start="2025-03-30T19:56:05.586634" elapsed="0.021139"/>
 </kw>
 <arg>Silvia Smith</arg>
-<status status="PASS" start="2024-06-21T18:24:17.010210" elapsed="0.113999"/>
+<status status="PASS" start="2025-03-30T19:56:05.586507" elapsed="0.021317"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Tomar Screenshot" owner="base_page">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:17.266210" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/5_Reserva%20preenchida.jpg"&gt;&lt;img src="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/5_Reserva%20preenchida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T19:56:05.847324" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-21T18:24:17.125209" elapsed="0.141001"/>
+<status status="PASS" start="2025-03-30T19:56:05.608081" elapsed="0.239290"/>
 </kw>
-<arg>5_Reserva preenchida</arg>
-<status status="PASS" start="2024-06-21T18:24:17.125209" elapsed="0.141001"/>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:05.607942" elapsed="0.239471"/>
 </kw>
-<kw name="Clicar no botao Purchase Flight" owner="reserved_page">
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:17.272210" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<msg time="2025-03-30T19:56:05.847697" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
 <arg>${btn_purchase_flight}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-21T18:24:17.272210" elapsed="0.440006"/>
+<status status="PASS" start="2025-03-30T19:56:05.847619" elapsed="0.459934"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:17.271210" elapsed="0.441006"/>
+<status status="PASS" start="2025-03-30T19:56:05.847515" elapsed="0.460164"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Tomar Screenshot" owner="base_page">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:17.856207" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2024.06.21_18.24.11/Comprar%20Passagem/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T19:56:06.557771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/Comprar%20Tiquete/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-21T18:24:17.721212" elapsed="0.135997"/>
+<status status="PASS" start="2025-03-30T19:56:06.308181" elapsed="0.249642"/>
 </kw>
 <arg>6_Dados da reserva</arg>
-<status status="PASS" start="2024-06-21T18:24:17.720211" elapsed="0.136998"/>
+<status status="PASS" start="2025-03-30T19:56:06.307909" elapsed="0.249964"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-21T18:24:17.859209" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg time="2024-06-21T18:24:17.861209" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
-<arg>${titulo_secao_purchase_data}</arg>
+<msg time="2025-03-30T19:56:06.558090" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
 <arg>Thank you for your purchase today!</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-21T18:24:17.859209" elapsed="0.023000"/>
+<status status="PASS" start="2025-03-30T19:56:06.557981" elapsed="0.005086"/>
 </kw>
-<kw name="Fechar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-21T18:24:18.384756" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2025-03-30T19:56:07.065474" level="INFO">Slept 500 milliseconds.</msg>
 <arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-21T18:24:17.884210" elapsed="0.500546"/>
+<status status="PASS" start="2025-03-30T19:56:06.563509" elapsed="0.502185"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-21T18:24:18.384756" elapsed="2.334883"/>
+<status status="PASS" start="2025-03-30T19:56:07.066070" elapsed="0.081344"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:17.883210" elapsed="2.836429"/>
+<status status="PASS" start="2025-03-30T19:56:06.563328" elapsed="0.584186"/>
 </kw>
-<status status="PASS" start="2024-06-21T18:24:11.589287" elapsed="9.131330"/>
+<status status="PASS" start="2025-03-30T19:56:01.990844" elapsed="5.156782"/>
 </test>
-<status status="PASS" start="2024-06-21T18:24:11.563288" elapsed="9.158330"/>
+<status status="PASS" start="2025-03-30T19:56:01.989670" elapsed="5.158259"/>
 </suite>
-<status status="PASS" start="2024-06-21T18:24:11.266289" elapsed="9.457329"/>
+<suite id="s1-s1-s1-s2" name="Comprar Ticket Po Ddt" source="/Users/cahernandezv/Downloads/blazedemo/test/web/po/comprar_ticket_po_ddt.robot">
+<test id="s1-s1-s1-s2-t1" name="DB001" line="7">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:07.151493" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2025-03-30T19:56:07.151324" elapsed="0.000222"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:07.152480" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:07.151693" elapsed="1.561354"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:08.713644" elapsed="0.380912"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>8000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.094695" elapsed="0.000607"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.095376" elapsed="0.012137"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:07.151018" elapsed="1.956603"/>
+</kw>
+<kw name="Comprar Tiquete">
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:09.305104" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB001/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB001/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.108178" elapsed="0.196987"/>
+</kw>
+<arg>1_Welcome</arg>
+<status status="PASS" start="2025-03-30T19:56:09.108071" elapsed="0.197148"/>
+</kw>
+<kw name="Escoger ciudad de origen" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:09.305503" level="INFO">Selecting options from selection list 'name=fromPort' by value Boston.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.305418" elapsed="0.024605"/>
+</kw>
+<arg>${city_from}</arg>
+<status status="PASS" start="2025-03-30T19:56:09.305299" elapsed="0.024779"/>
+</kw>
+<kw name="Escoger ciudad de destino" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:09.330373" level="INFO">Selecting options from selection list 'name=toPort' by value London.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.330282" elapsed="0.019355"/>
+</kw>
+<arg>${city_to}</arg>
+<status status="PASS" start="2025-03-30T19:56:09.330156" elapsed="0.019565"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:09.544571" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB001/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB001/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.349943" elapsed="0.194673"/>
+</kw>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:09.349818" elapsed="0.194839"/>
+</kw>
+<kw name="Click en boton Find Flights" owner="welcome_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:09.545158" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${bton_find_flights}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:09.544815" elapsed="0.568611"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:09.544727" elapsed="0.568953"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.114074" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from Boston to London:'.</msg>
+<arg>${title_choose}</arg>
+<arg>Flights from ${city_from} to ${city_to}:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.113820" elapsed="0.013051"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.357016" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB001/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB001/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.127324" elapsed="0.229744"/>
+</kw>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:10.127044" elapsed="0.230071"/>
+</kw>
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.357366" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>${btn_choose}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.357292" elapsed="0.286852"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:10.357193" elapsed="0.287173"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.872062" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB001/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB001/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.645074" elapsed="0.227065"/>
+</kw>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:10.644652" elapsed="0.227547"/>
+</kw>
+<kw name="completar el campo Name" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.872585" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>${txt_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.872486" elapsed="0.086726"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:10.872294" elapsed="0.086976"/>
+</kw>
+<kw name="completar el campo Address" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.959593" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>${txt_address}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.959510" elapsed="0.024658"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:10.959348" elapsed="0.024875"/>
+</kw>
+<kw name="completar el campo City" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:10.984498" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:10.984417" elapsed="0.026168"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:10.984299" elapsed="0.026344"/>
+</kw>
+<kw name="completar el campo State" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.010945" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.010864" elapsed="0.023228"/>
+</kw>
+<arg>Espírito Santo</arg>
+<status status="PASS" start="2025-03-30T19:56:11.010733" elapsed="0.023413"/>
+</kw>
+<kw name="completar el campo Zip Code" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.034420" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>${txt_zipCode}</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.034344" elapsed="0.021546"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:11.034218" elapsed="0.021733"/>
+</kw>
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.056233" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>${txt_creditCardNumber}</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.056150" elapsed="0.022705"/>
+</kw>
+<arg>10000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:11.056028" elapsed="0.022880"/>
+</kw>
+<kw name="completar el campo Name on Card" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.079174" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>${txt_nameOnCard}</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.079099" elapsed="0.023707"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:11.078986" elapsed="0.023901"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.324501" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB001/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB001/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.103077" elapsed="0.221478"/>
+</kw>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:11.102963" elapsed="0.221640"/>
+</kw>
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.324832" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${btn_purchase_flight}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.324763" elapsed="0.300095"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:11.324671" elapsed="0.300325"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.870833" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB001/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB001/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.625295" elapsed="0.245591"/>
+</kw>
+<arg>6_Dados da reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:11.625114" elapsed="0.245824"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:11.871099" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.871004" elapsed="0.004884"/>
+</kw>
+<arg>Boston</arg>
+<arg>London</arg>
+<status status="PASS" start="2025-03-30T19:56:09.107880" elapsed="2.768041"/>
+</kw>
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:12.378097" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:11.876181" elapsed="0.502113"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:12.378593" elapsed="0.079414"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:11.876076" elapsed="0.581999"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:07.150566" elapsed="5.307563"/>
+</test>
+<test id="s1-s1-s1-s2-t2" name="DB002" line="8">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:12.458724" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2025-03-30T19:56:12.458657" elapsed="0.000089"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:12.458894" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:12.458803" elapsed="3.822728"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.282220" elapsed="0.380062"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>8000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.662418" elapsed="0.000632"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.663125" elapsed="0.010727"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:12.458535" elapsed="4.215393"/>
+</kw>
+<kw name="Comprar Tiquete">
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:16.875785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB002/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB002/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.674507" elapsed="0.201338"/>
+</kw>
+<arg>1_Welcome</arg>
+<status status="PASS" start="2025-03-30T19:56:16.674397" elapsed="0.201509"/>
+</kw>
+<kw name="Escoger ciudad de origen" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:16.876177" level="INFO">Selecting options from selection list 'name=fromPort' by value São Paolo.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.876099" elapsed="0.025110"/>
+</kw>
+<arg>${city_from}</arg>
+<status status="PASS" start="2025-03-30T19:56:16.875983" elapsed="0.025287"/>
+</kw>
+<kw name="Escoger ciudad de destino" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:16.901553" level="INFO">Selecting options from selection list 'name=toPort' by value Berlin.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.901477" elapsed="0.021009"/>
+</kw>
+<arg>${city_to}</arg>
+<status status="PASS" start="2025-03-30T19:56:16.901350" elapsed="0.021211"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:17.109111" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB002/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB002/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:16.922842" elapsed="0.186321"/>
+</kw>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:16.922666" elapsed="0.186549"/>
+</kw>
+<kw name="Click en boton Find Flights" owner="welcome_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:17.109456" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${bton_find_flights}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:17.109383" elapsed="0.284229"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:17.109288" elapsed="0.284827"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:17.395018" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from São Paolo to Berlin:'.</msg>
+<arg>${title_choose}</arg>
+<arg>Flights from ${city_from} to ${city_to}:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:17.394485" elapsed="0.030467"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:17.642363" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB002/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB002/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:17.425330" elapsed="0.217081"/>
+</kw>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:17.425142" elapsed="0.217319"/>
+</kw>
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:17.642697" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>${btn_choose}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:17.642627" elapsed="0.442706"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:17.642532" elapsed="0.443009"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.317375" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB002/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB002/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.086310" elapsed="0.231112"/>
+</kw>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:18.085846" elapsed="0.231642"/>
+</kw>
+<kw name="completar el campo Name" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.317732" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>${txt_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.317659" elapsed="0.069904"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:18.317556" elapsed="0.070069"/>
+</kw>
+<kw name="completar el campo Address" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.387900" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>${txt_address}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.387821" elapsed="0.024006"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:18.387706" elapsed="0.024182"/>
+</kw>
+<kw name="completar el campo City" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.412177" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.412096" elapsed="0.022142"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:18.411970" elapsed="0.022320"/>
+</kw>
+<kw name="completar el campo State" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.434542" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.434471" elapsed="0.052754"/>
+</kw>
+<arg>Espírito Santo</arg>
+<status status="PASS" start="2025-03-30T19:56:18.434360" elapsed="0.052928"/>
+</kw>
+<kw name="completar el campo Zip Code" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.487572" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>${txt_zipCode}</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.487485" elapsed="0.023501"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:18.487369" elapsed="0.023733"/>
+</kw>
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.511447" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>${txt_creditCardNumber}</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.511357" elapsed="0.021480"/>
+</kw>
+<arg>10000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:18.511192" elapsed="0.021699"/>
+</kw>
+<kw name="completar el campo Name on Card" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.533144" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>${txt_nameOnCard}</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.533072" elapsed="0.021603"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:18.532965" elapsed="0.021767"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.778817" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB002/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB002/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.554925" elapsed="0.223939"/>
+</kw>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:18.554809" elapsed="0.224099"/>
+</kw>
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:18.779128" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${btn_purchase_flight}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.779063" elapsed="0.023381"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:18.778975" elapsed="0.023524"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:19.124903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB002/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB002/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:18.802680" elapsed="0.322289"/>
+</kw>
+<arg>6_Dados da reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:18.802571" elapsed="0.322458"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:19.125232" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:19.125113" elapsed="0.009961"/>
+</kw>
+<arg>São Paolo</arg>
+<arg>Berlin</arg>
+<status status="PASS" start="2025-03-30T19:56:16.674143" elapsed="2.461048"/>
+</kw>
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:19.636340" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:19.135746" elapsed="0.500876"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:19.637024" elapsed="0.082848"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:19.135549" elapsed="0.584421"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:12.458340" elapsed="7.261725"/>
+</test>
+<test id="s1-s1-s1-s2-t3" name="DB003" line="9">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:19.721095" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2025-03-30T19:56:19.721000" elapsed="0.000118"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:19.721276" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:19.721180" elapsed="1.924014"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:21.645708" elapsed="1.984463"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>8000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:23.630311" elapsed="0.000605"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:23.630989" elapsed="0.010680"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:19.720685" elapsed="3.921059"/>
+</kw>
+<kw name="Comprar Tiquete">
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:23.840843" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB003/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB003/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:23.642284" elapsed="0.198609"/>
+</kw>
+<arg>1_Welcome</arg>
+<status status="PASS" start="2025-03-30T19:56:23.642184" elapsed="0.198760"/>
+</kw>
+<kw name="Escoger ciudad de origen" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:23.841206" level="INFO">Selecting options from selection list 'name=fromPort' by value Portland.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:23.841131" elapsed="0.025012"/>
+</kw>
+<arg>${city_from}</arg>
+<status status="PASS" start="2025-03-30T19:56:23.841017" elapsed="0.025186"/>
+</kw>
+<kw name="Escoger ciudad de destino" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:23.866498" level="INFO">Selecting options from selection list 'name=toPort' by value Buenos Aires.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:23.866412" elapsed="0.012850"/>
+</kw>
+<arg>${city_to}</arg>
+<status status="PASS" start="2025-03-30T19:56:23.866287" elapsed="0.013028"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:24.060685" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB003/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB003/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:23.879501" elapsed="0.181231"/>
+</kw>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:23.879386" elapsed="0.181388"/>
+</kw>
+<kw name="Click en boton Find Flights" owner="welcome_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:24.061001" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${bton_find_flights}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:24.060933" elapsed="0.251989"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:24.060843" elapsed="0.252347"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:24.314197" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from Portland to Buenos Aires:'.</msg>
+<arg>${title_choose}</arg>
+<arg>Flights from ${city_from} to ${city_to}:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:24.313490" elapsed="0.024172"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:24.540729" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB003/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB003/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:24.338095" elapsed="0.202682"/>
+</kw>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:24.337915" elapsed="0.202909"/>
+</kw>
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:24.541056" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>${btn_choose}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:24.540990" elapsed="0.270546"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:24.540899" elapsed="0.270872"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.041700" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB003/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB003/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:24.812406" elapsed="0.229343"/>
+</kw>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:24.812087" elapsed="0.229709"/>
+</kw>
+<kw name="completar el campo Name" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.042042" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>${txt_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.041969" elapsed="0.072982"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:25.041865" elapsed="0.073149"/>
+</kw>
+<kw name="completar el campo Address" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.115306" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>${txt_address}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.115221" elapsed="0.023908"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:25.115100" elapsed="0.024079"/>
+</kw>
+<kw name="completar el campo City" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.139434" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.139356" elapsed="0.022037"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:25.139249" elapsed="0.022225"/>
+</kw>
+<kw name="completar el campo State" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.161778" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.161690" elapsed="0.027853"/>
+</kw>
+<arg>Espírito Santo</arg>
+<status status="PASS" start="2025-03-30T19:56:25.161565" elapsed="0.028033"/>
+</kw>
+<kw name="completar el campo Zip Code" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.189860" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>${txt_zipCode}</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.189781" elapsed="0.020628"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:25.189672" elapsed="0.020786"/>
+</kw>
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.210720" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>${txt_creditCardNumber}</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.210643" elapsed="0.021929"/>
+</kw>
+<arg>10000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:25.210533" elapsed="0.022088"/>
+</kw>
+<kw name="completar el campo Name on Card" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.232867" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>${txt_nameOnCard}</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.232796" elapsed="0.021501"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:25.232694" elapsed="0.021655"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.440693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB003/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB003/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.254528" elapsed="0.186213"/>
+</kw>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:25.254420" elapsed="0.186363"/>
+</kw>
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.441023" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${btn_purchase_flight}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.440958" elapsed="0.296390"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:25.440872" elapsed="0.296633"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.954497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB003/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB003/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.738164" elapsed="0.216387"/>
+</kw>
+<arg>6_Dados da reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:25.737690" elapsed="0.216912"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:25.954757" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.954667" elapsed="0.004785"/>
+</kw>
+<arg>Portland</arg>
+<arg>Buenos Aires</arg>
+<status status="PASS" start="2025-03-30T19:56:23.642010" elapsed="2.317475"/>
+</kw>
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:26.460261" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:25.959763" elapsed="0.500722"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:26.460856" elapsed="0.074021"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:25.959644" elapsed="0.575303"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:19.720457" elapsed="6.814563"/>
+</test>
+<test id="s1-s1-s1-s2-t4" name="DB004" line="10">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:26.535639" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2025-03-30T19:56:26.535573" elapsed="0.000088"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:26.535811" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:26.535723" elapsed="2.554109"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.090254" elapsed="0.385909"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>8000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.476302" elapsed="0.000736"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.477134" elapsed="0.012682"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:26.535456" elapsed="2.954548"/>
+</kw>
+<kw name="Comprar Tiquete">
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:29.687609" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB004/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB004/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.491039" elapsed="0.196625"/>
+</kw>
+<arg>1_Welcome</arg>
+<status status="PASS" start="2025-03-30T19:56:29.490900" elapsed="0.196814"/>
+</kw>
+<kw name="Escoger ciudad de origen" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:29.687988" level="INFO">Selecting options from selection list 'name=fromPort' by value San Diego.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.687907" elapsed="0.027871"/>
+</kw>
+<arg>${city_from}</arg>
+<status status="PASS" start="2025-03-30T19:56:29.687790" elapsed="0.028042"/>
+</kw>
+<kw name="Escoger ciudad de destino" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:29.716116" level="INFO">Selecting options from selection list 'name=toPort' by value Cairo.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.716033" elapsed="0.020440"/>
+</kw>
+<arg>${city_to}</arg>
+<status status="PASS" start="2025-03-30T19:56:29.715911" elapsed="0.020657"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:29.928670" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB004/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB004/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.736806" elapsed="0.191910"/>
+</kw>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:29.736676" elapsed="0.192084"/>
+</kw>
+<kw name="Click en boton Find Flights" owner="welcome_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:29.928989" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${bton_find_flights}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:29.928920" elapsed="0.412391"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:29.928831" elapsed="0.412711"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:30.342394" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from San Diego to Cairo:'.</msg>
+<arg>${title_choose}</arg>
+<arg>Flights from ${city_from} to ${city_to}:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:30.341819" elapsed="0.033783"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:30.574604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB004/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB004/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:30.375972" elapsed="0.198713"/>
+</kw>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:30.375772" elapsed="0.198959"/>
+</kw>
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:30.574963" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>${btn_choose}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:30.574896" elapsed="0.366244"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:30.574803" elapsed="0.366558"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.184902" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB004/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB004/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:30.942129" elapsed="0.242825"/>
+</kw>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:30.941654" elapsed="0.243349"/>
+</kw>
+<kw name="completar el campo Name" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.185250" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>${txt_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.185178" elapsed="0.081324"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:31.185073" elapsed="0.081487"/>
+</kw>
+<kw name="completar el campo Address" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.266842" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>${txt_address}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.266757" elapsed="0.025296"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:31.266639" elapsed="0.025464"/>
+</kw>
+<kw name="completar el campo City" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.292358" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.292284" elapsed="0.028039"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:31.292173" elapsed="0.028205"/>
+</kw>
+<kw name="completar el campo State" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.320638" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.320562" elapsed="0.030025"/>
+</kw>
+<arg>Espírito Santo</arg>
+<status status="PASS" start="2025-03-30T19:56:31.320452" elapsed="0.030186"/>
+</kw>
+<kw name="completar el campo Zip Code" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.350890" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>${txt_zipCode}</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.350816" elapsed="0.021784"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:31.350710" elapsed="0.021943"/>
+</kw>
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.372977" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>${txt_creditCardNumber}</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.372891" elapsed="0.021026"/>
+</kw>
+<arg>10000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:31.372762" elapsed="0.021207"/>
+</kw>
+<kw name="completar el campo Name on Card" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.394227" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>${txt_nameOnCard}</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.394150" elapsed="0.024123"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:31.394042" elapsed="0.024288"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.647017" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB004/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB004/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.418558" elapsed="0.228507"/>
+</kw>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:31.418411" elapsed="0.228702"/>
+</kw>
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.647342" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${btn_purchase_flight}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.647274" elapsed="0.022274"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:31.647183" elapsed="0.022421"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.956420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB004/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB004/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.669790" elapsed="0.286695"/>
+</kw>
+<arg>6_Dados da reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:31.669677" elapsed="0.286868"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:31.956744" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.956627" elapsed="0.007727"/>
+</kw>
+<arg>San Diego</arg>
+<arg>Cairo</arg>
+<status status="PASS" start="2025-03-30T19:56:29.490557" elapsed="2.473854"/>
+</kw>
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:32.466700" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:31.964707" elapsed="0.502260"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:32.467366" elapsed="0.081647"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:31.964585" elapsed="0.584523"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:26.535270" elapsed="6.013913"/>
+</test>
+<test id="s1-s1-s1-s2-t5" name="DB005" line="11">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:32.550035" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2025-03-30T19:56:32.549936" elapsed="0.000123"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:32.550237" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:32.550127" elapsed="1.918222"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:34.468664" elapsed="0.378170"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>8000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:34.846975" elapsed="0.000607"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:34.847652" elapsed="0.010770"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:32.549733" elapsed="2.308789"/>
+</kw>
+<kw name="Comprar Tiquete">
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.056615" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB005/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB005/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:34.859066" elapsed="0.197604"/>
+</kw>
+<arg>1_Welcome</arg>
+<status status="PASS" start="2025-03-30T19:56:34.858957" elapsed="0.197760"/>
+</kw>
+<kw name="Escoger ciudad de origen" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.057003" level="INFO">Selecting options from selection list 'name=fromPort' by value Mexico City.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.056913" elapsed="0.024418"/>
+</kw>
+<arg>${city_from}</arg>
+<status status="PASS" start="2025-03-30T19:56:35.056794" elapsed="0.024593"/>
+</kw>
+<kw name="Escoger ciudad de destino" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.081685" level="INFO">Selecting options from selection list 'name=toPort' by value Dublin.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.081600" elapsed="0.018375"/>
+</kw>
+<arg>${city_to}</arg>
+<status status="PASS" start="2025-03-30T19:56:35.081478" elapsed="0.018612"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.297806" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB005/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB005/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.100319" elapsed="0.197536"/>
+</kw>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:35.100193" elapsed="0.197707"/>
+</kw>
+<kw name="Click en boton Find Flights" owner="welcome_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.298132" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${bton_find_flights}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.298063" elapsed="0.329272"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:35.297972" elapsed="0.329528"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.628233" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from Mexico City to Dublin:'.</msg>
+<arg>${title_choose}</arg>
+<arg>Flights from ${city_from} to ${city_to}:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.627719" elapsed="0.025084"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.863802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB005/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB005/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.653364" elapsed="0.210491"/>
+</kw>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:35.653012" elapsed="0.210902"/>
+</kw>
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:35.864158" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>${btn_choose}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:35.864089" elapsed="0.339564"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:35.863992" elapsed="0.339968"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.405516" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB005/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB005/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.204487" elapsed="0.201079"/>
+</kw>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:36.204207" elapsed="0.201404"/>
+</kw>
+<kw name="completar el campo Name" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.405870" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>${txt_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.405788" elapsed="0.080780"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:36.405676" elapsed="0.080994"/>
+</kw>
+<kw name="completar el campo Address" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.487109" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>${txt_address}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.486967" elapsed="0.024105"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:36.486754" elapsed="0.024372"/>
+</kw>
+<kw name="completar el campo City" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.511382" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.511310" elapsed="0.024858"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:36.511197" elapsed="0.025023"/>
+</kw>
+<kw name="completar el campo State" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.536475" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.536401" elapsed="0.046325"/>
+</kw>
+<arg>Espírito Santo</arg>
+<status status="PASS" start="2025-03-30T19:56:36.536293" elapsed="0.046493"/>
+</kw>
+<kw name="completar el campo Zip Code" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.583068" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>${txt_zipCode}</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.582988" elapsed="0.024917"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:36.582869" elapsed="0.025092"/>
+</kw>
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.608239" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>${txt_creditCardNumber}</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.608159" elapsed="0.029270"/>
+</kw>
+<arg>10000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:36.608036" elapsed="0.029509"/>
+</kw>
+<kw name="completar el campo Name on Card" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.637962" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>${txt_nameOnCard}</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.637870" elapsed="0.024882"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:36.637708" elapsed="0.025128"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.896020" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB005/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB005/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.663166" elapsed="0.232907"/>
+</kw>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:36.662979" elapsed="0.233190"/>
+</kw>
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:36.896453" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${btn_purchase_flight}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:36.896371" elapsed="0.638950"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:36.896271" elapsed="0.639203"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:37.782160" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB005/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB005/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:37.536164" elapsed="0.246059"/>
+</kw>
+<arg>6_Dados da reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:37.535743" elapsed="0.246530"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:37.782429" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:37.782339" elapsed="0.004683"/>
+</kw>
+<arg>Mexico City</arg>
+<arg>Dublin</arg>
+<status status="PASS" start="2025-03-30T19:56:34.858770" elapsed="2.928282"/>
+</kw>
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:38.287548" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:37.787304" elapsed="0.500464"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:38.288090" elapsed="0.071828"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:37.787205" elapsed="0.572791"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:32.549397" elapsed="5.810662"/>
+</test>
+<test id="s1-s1-s1-s2-t6" name="DB006" line="12">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:38.360623" level="INFO">Tomar Screenshot will be run on failure.</msg>
+<arg>Tomar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2025-03-30T19:56:38.360551" elapsed="0.000095"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:38.360807" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:38.360710" elapsed="1.823742"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.184752" elapsed="0.380793"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>8000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.565723" elapsed="0.000780"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.566602" elapsed="0.014791"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:38.360422" elapsed="2.221115"/>
+</kw>
+<kw name="Comprar Tiquete">
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:40.775427" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB006/1_Welcome.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB006/1_Welcome.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.582078" elapsed="0.193403"/>
+</kw>
+<arg>1_Welcome</arg>
+<status status="PASS" start="2025-03-30T19:56:40.581960" elapsed="0.193572"/>
+</kw>
+<kw name="Escoger ciudad de origen" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:40.775802" level="INFO">Selecting options from selection list 'name=fromPort' by value Philadelphia.</msg>
+<arg>${select_from}</arg>
+<arg>${city_from}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.775724" elapsed="0.025336"/>
+</kw>
+<arg>${city_from}</arg>
+<status status="PASS" start="2025-03-30T19:56:40.775608" elapsed="0.025519"/>
+</kw>
+<kw name="Escoger ciudad de destino" owner="welcome_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:40.801426" level="INFO">Selecting options from selection list 'name=toPort' by value New York.</msg>
+<arg>${select_to}</arg>
+<arg>${city_to}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.801339" elapsed="0.020175"/>
+</kw>
+<arg>${city_to}</arg>
+<status status="PASS" start="2025-03-30T19:56:40.801211" elapsed="0.020385"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:41.013493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB006/2_Ciudad%20elegida.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB006/2_Ciudad%20elegida.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:40.821861" elapsed="0.191679"/>
+</kw>
+<arg>2_Ciudad elegida</arg>
+<status status="PASS" start="2025-03-30T19:56:40.821711" elapsed="0.191874"/>
+</kw>
+<kw name="Click en boton Find Flights" owner="welcome_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:41.013811" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${bton_find_flights}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:41.013743" elapsed="0.414919"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:41.013652" elapsed="0.415230"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:41.429693" level="INFO">Verifying element 'css=h3' contains exact text 'Flights from Philadelphia to New York:'.</msg>
+<arg>${title_choose}</arg>
+<arg>Flights from ${city_from} to ${city_to}:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:41.429140" elapsed="0.032862"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:41.676728" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB006/3_Elige%20vuelo.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB006/3_Elige%20vuelo.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:41.462454" elapsed="0.214327"/>
+</kw>
+<arg>3_Elige vuelo</arg>
+<status status="PASS" start="2025-03-30T19:56:41.462171" elapsed="0.214660"/>
+</kw>
+<kw name="Click en el botón Elegir este vuelo" owner="choose_flight_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:41.677072" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>${btn_choose}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:41.677003" elapsed="0.950574"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:41.676909" elapsed="0.950782"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:42.855085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB006/4_Completar%20datos%20de%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB006/4_Completar%20datos%20de%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:42.628097" elapsed="0.227043"/>
+</kw>
+<arg>4_Completar datos de reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:42.627842" elapsed="0.227347"/>
+</kw>
+<kw name="completar el campo Name" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:42.855437" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>${txt_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:42.855365" elapsed="0.073811"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:42.855260" elapsed="0.073975"/>
+</kw>
+<kw name="completar el campo Address" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:42.929525" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>${txt_address}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:42.929441" elapsed="0.026017"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:42.929314" elapsed="0.026206"/>
+</kw>
+<kw name="completar el campo City" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:42.955809" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:42.955726" elapsed="0.028130"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:42.955602" elapsed="0.028317"/>
+</kw>
+<kw name="completar el campo State" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:42.984216" level="INFO">Typing text 'Espírito Santo' into text field 'id=state'.</msg>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:42.984134" elapsed="0.047501"/>
+</kw>
+<arg>Espírito Santo</arg>
+<status status="PASS" start="2025-03-30T19:56:42.984005" elapsed="0.047693"/>
+</kw>
+<kw name="completar el campo Zip Code" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.032042" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>${txt_zipCode}</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.031924" elapsed="0.021418"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:43.031788" elapsed="0.021605"/>
+</kw>
+<kw name="completar el campo Credit Card Number" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.053649" level="INFO">Typing text '10000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>${txt_creditCardNumber}</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.053575" elapsed="0.020884"/>
+</kw>
+<arg>10000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:43.053467" elapsed="0.021057"/>
+</kw>
+<kw name="completar el campo Name on Card" owner="reserved_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.074855" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>${txt_nameOnCard}</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.074759" elapsed="0.021184"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:43.074629" elapsed="0.021405"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.332232" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB006/5_Reserva%20completa.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB006/5_Reserva%20completa.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.096247" elapsed="0.236034"/>
+</kw>
+<arg>5_Reserva completa</arg>
+<status status="PASS" start="2025-03-30T19:56:43.096128" elapsed="0.236199"/>
+</kw>
+<kw name="Click en el boton comprar vuelo" owner="reserved_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.332566" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>${btn_purchase_flight}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.332495" elapsed="0.313121"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:43.332398" elapsed="0.313448"/>
+</kw>
+<kw name="Tomar Screenshot" owner="base_page">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.893468" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/DB006/6_Dados%20da%20reserva.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/DB006/6_Dados%20da%20reserva.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.646645" elapsed="0.246875"/>
+</kw>
+<arg>6_Dados da reserva</arg>
+<status status="PASS" start="2025-03-30T19:56:43.646110" elapsed="0.247458"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:43.893729" level="INFO">Verifying element 'css=h1' contains exact text 'Thank you for your purchase today!'.</msg>
+<arg>${title_purchase_data}</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.893636" elapsed="0.004744"/>
+</kw>
+<arg>Philadelphia</arg>
+<arg>New York</arg>
+<status status="PASS" start="2025-03-30T19:56:40.581746" elapsed="3.316691"/>
+</kw>
+<kw name="Cerrar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:44.399714" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:43.898810" elapsed="0.501128"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:44.400241" elapsed="0.073875"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:43.898702" elapsed="0.575484"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:38.360220" elapsed="6.114023"/>
+</test>
+<status status="PASS" start="2025-03-30T19:56:07.148137" elapsed="37.326312"/>
+</suite>
+<status status="PASS" start="2025-03-30T19:56:01.946507" elapsed="42.528211"/>
+</suite>
+<suite id="s1-s1-s2" name="Simples" source="/Users/cahernandezv/Downloads/blazedemo/test/web/simples">
+<suite id="s1-s1-s2-s1" name="Comprar Ticket" source="/Users/cahernandezv/Downloads/blazedemo/test/web/simples/comprar_ticket.robot">
+<test id="s1-s1-s2-s1-t1" name="Comprar Tiquete" line="11">
+<kw name="Dado que accedo al sitio blazedemo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:44.476598" level="INFO">Opening browser 'Chrome' to base url 'https://www.blazedemo.com/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:44.476483" elapsed="1.036349"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-30T19:56:45.516991" elapsed="1.476391"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-03-30T19:56:46.993523" elapsed="0.000553"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:46.994139" elapsed="0.010446"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:44.476366" elapsed="2.528293"/>
+</kw>
+<kw name="Cuando elijo la ciudad de partida">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:47.005033" level="INFO">Selecting options from selection list 'name=fromPort' by value Paris.</msg>
+<arg>name=fromPort</arg>
+<arg>Paris</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:47.004954" elapsed="0.017650"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:47.004815" elapsed="0.017860"/>
+</kw>
+<kw name="Y elijo la ciudad de destino">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:47.023182" level="INFO">Selecting options from selection list 'name=toPort' by value Rome.</msg>
+<arg>name=toPort</arg>
+<arg>Rome</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-30T19:56:47.023040" elapsed="0.027786"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:47.022829" elapsed="0.028079"/>
+</kw>
+<kw name="Y hago click en el botón Find Flights">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:47.051243" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:47.051164" elapsed="0.441442"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:47.051041" elapsed="0.441854"/>
+</kw>
+<kw name="Entonces soy dirigido a la página de opciones de vuelos">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h3</arg>
+<arg>Flights from Paris to Rome:</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:47.493903" elapsed="0.027431"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:47.493378" elapsed="0.028138"/>
+</kw>
+<kw name="Y hago click en el botón Choose This Flight">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:47.521957" level="INFO">Clicking button 'css=.btn.btn-small'.</msg>
+<arg>css=.btn.btn-small</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:47.521841" elapsed="0.033866"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:47.521674" elapsed="0.034129"/>
+</kw>
+<kw name="Entonces soy dirigido a la página de reserva del vuelo">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h2</arg>
+<arg>Your flight from TLV to SFO has been reserved.</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:47.556097" elapsed="0.970191"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:47.555953" elapsed="0.970460"/>
+</kw>
+<kw name="Cuando lleno el campo Name">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.527124" level="INFO">Typing text 'Silvia' into text field 'id=inputName'.</msg>
+<arg>id=inputName</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.526876" elapsed="0.088193"/>
+</kw>
+<arg>Silvia</arg>
+<status status="PASS" start="2025-03-30T19:56:48.526627" elapsed="0.088594"/>
+</kw>
+<kw name="Y lleno el campo Address">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.616021" level="INFO">Typing text 'Rua Principal, 123' into text field 'id=address'.</msg>
+<arg>id=address</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.615836" elapsed="0.029214"/>
+</kw>
+<arg>Rua Principal, 123</arg>
+<status status="PASS" start="2025-03-30T19:56:48.615478" elapsed="0.029808"/>
+</kw>
+<kw name="Y lleno el campo City">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.646216" level="INFO">Typing text 'New City' into text field 'id=city'.</msg>
+<arg>id=city</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.646044" elapsed="0.055513"/>
+</kw>
+<arg>New City</arg>
+<status status="PASS" start="2025-03-30T19:56:48.645558" elapsed="0.056071"/>
+</kw>
+<kw name="Y lleno el campo State">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.701990" level="INFO">Typing text 'São Paulo' into text field 'id=state'.</msg>
+<arg>id=state</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.701899" elapsed="0.024290"/>
+</kw>
+<arg>São Paulo</arg>
+<status status="PASS" start="2025-03-30T19:56:48.701754" elapsed="0.024502"/>
+</kw>
+<kw name="Y lleno el campo Zip Code">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.726594" level="INFO">Typing text '29000000' into text field 'id=zipCode'.</msg>
+<arg>id=zipCode</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.726512" elapsed="0.023398"/>
+</kw>
+<arg>29000000</arg>
+<status status="PASS" start="2025-03-30T19:56:48.726371" elapsed="0.023669"/>
+</kw>
+<kw name="Y lleno el campo Credit Card Number">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.750400" level="INFO">Typing text '1000000001' into text field 'id=creditCardNumber'.</msg>
+<arg>id=creditCardNumber</arg>
+<arg>${credit_card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.750307" elapsed="0.022122"/>
+</kw>
+<arg>1000000001</arg>
+<status status="PASS" start="2025-03-30T19:56:48.750162" elapsed="0.022318"/>
+</kw>
+<kw name="Y lleno el campo Name on Card">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.772764" level="INFO">Typing text 'Silvia Smith' into text field 'id=nameOnCard'.</msg>
+<arg>id=nameOnCard</arg>
+<arg>${name_on_card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.772691" elapsed="0.021316"/>
+</kw>
+<arg>Silvia Smith</arg>
+<status status="PASS" start="2025-03-30T19:56:48.772577" elapsed="0.021483"/>
+</kw>
+<kw name="Y hago click en el botón Purchase Flight">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:48.794331" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:48.794267" elapsed="0.865211"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:48.794161" elapsed="0.865574"/>
+</kw>
+<kw name="Entonces soy dirigido a la página de Thank you">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=h1</arg>
+<arg>Thank you for your purchase today!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-30T19:56:49.660868" elapsed="0.010185"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:49.660223" elapsed="0.010919"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:49.671337" elapsed="0.071381"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:44.476111" elapsed="5.267766"/>
+</test>
+<status status="PASS" start="2025-03-30T19:56:44.475490" elapsed="5.269133"/>
+</suite>
+<suite id="s1-s1-s2-s2" name="Register" source="/Users/cahernandezv/Downloads/blazedemo/test/web/simples/register.robot">
+<test id="s1-s1-s2-s2-t1" name="Cargar Página De Registro" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:49.751175" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:49.751070" elapsed="2.058044"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:51.812055" level="INFO">Page title is 'BlazeDemo'.</msg>
+<arg>BlazeDemo</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.809578" elapsed="0.002530"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:51.818720" level="INFO">Current page contains element 'name=name'.</msg>
+<arg>name=name</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.812235" elapsed="0.006593"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:51.824177" level="INFO">Current page contains element 'name=company'.</msg>
+<arg>name=company</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.819029" elapsed="0.005201"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:51.829079" level="INFO">Current page contains element 'name=email'.</msg>
+<arg>name=email</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.824365" elapsed="0.004815"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:51.836750" level="INFO">Current page contains element 'name=password'.</msg>
+<arg>name=password</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.829443" elapsed="0.007367"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:51.841235" level="INFO">Current page contains element 'name=password_confirmation'.</msg>
+<arg>name=password_confirmation</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.837032" elapsed="0.004232"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:52.841912" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:51.841354" elapsed="1.000866"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:52.973948" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/register/1_registro_carga.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/register/1_registro_carga.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/register/1_registro_carga.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:52.842821" elapsed="0.131190"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:52.978249" level="INFO">Current page contains element 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:52.974176" elapsed="0.004100"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:52.978358" elapsed="0.065695"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:49.750817" elapsed="3.293391"/>
+</test>
+<test id="s1-s1-s2-s2-t2" name="Registro Exitoso Con Datos Válidos" line="31">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:53.044648" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:53.044532" elapsed="1.406118"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:54.451385" level="INFO">Typing text 'Andrés Tester' into text field 'name=name'.</msg>
+<arg>name=name</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:54.451134" elapsed="0.079607"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:54.531180" level="INFO">Typing text 'BlazeCorp' into text field 'name=company'.</msg>
+<arg>name=company</arg>
+<arg>${COMPANY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:54.531027" elapsed="0.027030"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:54.558446" level="INFO">Typing text 'andres.test@demo.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:54.558277" elapsed="0.024857"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:54.583444" level="INFO">Typing text 'clave123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:54.583302" elapsed="0.023366"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:54.606929" level="INFO">Typing text 'clave123' into text field 'name=password_confirmation'.</msg>
+<arg>name=password_confirmation</arg>
+<arg>${PASSWORD_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:54.606805" elapsed="0.021535"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:56:55.631048" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:56:54.628483" elapsed="1.002817"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:55.778611" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/register/2_Registro%20Exitoso%20Con%20Datos%20V%C3%A1lidos.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/register/2_Registro%20Exitoso%20Con%20Datos%20V%C3%A1lidos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/register/2_Registro Exitoso Con Datos Válidos.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:56:55.631874" elapsed="0.146807"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:55.778929" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:55.778820" elapsed="0.341385"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Page Expired</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:56:56.123186" elapsed="0.660361"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:56:56.783865" elapsed="0.078593"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:53.044334" elapsed="3.818291"/>
+</test>
+<test id="s1-s1-s2-s2-t3" name="Registro Fallido Por Contraseñas Distintas" line="44">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:56.863075" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:56:56.862957" elapsed="2.003331"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:58.867149" level="INFO">Typing text 'Andrés Tester' into text field 'name=name'.</msg>
+<arg>name=name</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:58.866850" elapsed="0.079257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:58.946418" level="INFO">Typing text 'BlazeCorp' into text field 'name=company'.</msg>
+<arg>name=company</arg>
+<arg>${COMPANY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:58.946275" elapsed="0.027557"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:58.974144" level="INFO">Typing text 'andres.test@demo.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:58.973998" elapsed="0.027079"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:59.001389" level="INFO">Typing text 'clave123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:59.001241" elapsed="0.030677"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:59.032754" level="INFO">Typing text 'diferente123' into text field 'name=password_confirmation'.</msg>
+<arg>name=password_confirmation</arg>
+<arg>${BAD_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:59.032232" elapsed="0.025482"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:56:59.057980" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:56:59.057869" elapsed="1.320453"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:01.380414" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:00.378666" elapsed="1.001955"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:01.528614" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/register/3_Registro%20Fallido%20Por%20Contrase%C3%B1as%20Distintas.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/register/3_Registro%20Fallido%20Por%20Contrase%C3%B1as%20Distintas.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/register/3_Registro Fallido Por Contraseñas Distintas.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:01.381107" elapsed="0.147571"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:01.530630" level="INFO">Current location is 'https://www.blazedemo.com/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:01.528835" elapsed="0.001819"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:01.530731" elapsed="0.067017"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:56:56.862751" elapsed="4.735158"/>
+</test>
+<test id="s1-s1-s2-s2-t4" name="Registro Sin Llenar Campos" line="57">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:01.598344" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:01.598238" elapsed="2.853796"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:04.452516" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:04.452336" elapsed="0.034705"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:05.487767" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:04.487214" elapsed="1.000817"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:05.647397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/register/4_registro_campos_vacios.png"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/register/4_registro_campos_vacios.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/register/4_registro_campos_vacios.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:05.488511" elapsed="0.158956"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:05.649246" level="INFO">Current location is 'https://www.blazedemo.com/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:05.647607" elapsed="0.001662"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:05.649334" elapsed="0.066484"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:01.598029" elapsed="4.117964"/>
+</test>
+<status status="PASS" start="2025-03-30T19:56:49.745212" elapsed="15.970997"/>
+</suite>
+<suite id="s1-s1-s2-s3" name="Reset Password" source="/Users/cahernandezv/Downloads/blazedemo/test/web/simples/reset_password.robot">
+<test id="s1-s1-s2-s3-t1" name="Cargar Página De Recuperación De Contraseña" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:05.719235" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/password/reset'.</msg>
+<arg>${RESET_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:05.719140" elapsed="1.529436"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:07.252080" level="INFO">Page title is 'BlazeDemo'.</msg>
+<arg>BlazeDemo</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-03-30T19:57:07.249001" elapsed="0.003130"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:07.257139" level="INFO">Current page contains element 'name=email'.</msg>
+<arg>name=email</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:07.252258" elapsed="0.004930"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:07.262487" level="INFO">Current page contains element 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:07.257328" elapsed="0.005214"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:08.264330" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:07.262687" elapsed="1.001938"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:08.391524" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/reset_password/1_Cargar%20P%C3%A1gina%20De%20Recuperaci%C3%B3n%20De%20Contrase%C3%B1a.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/reset_password/1_Cargar%20P%C3%A1gina%20De%20Recuperaci%C3%B3n%20De%20Contrase%C3%B1a.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/reset_password/1_Cargar Página De Recuperación De Contraseña.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:08.265109" elapsed="0.126491"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:08.391748" elapsed="0.065101"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:05.718905" elapsed="2.738104"/>
+</test>
+<test id="s1-s1-s2-s3-t2" name="Enviar Formulario Con Email Válido" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:08.457426" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/password/reset'.</msg>
+<arg>${RESET_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:08.457307" elapsed="1.641643"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:10.100134" level="INFO">Typing text 'prueba@demo.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:10.099682" elapsed="0.091955"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:11.192316" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:10.191870" elapsed="1.000664"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:11.343280" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/reset_password/2_Enviar%20Formulario%20Con%20Email%20V%C3%A1lido.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/reset_password/2_Enviar%20Formulario%20Con%20Email%20V%C3%A1lido.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/reset_password/2_Enviar Formulario Con Email Válido.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:11.193038" elapsed="0.150307"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:11.343676" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:11.343558" elapsed="0.412823"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Page Expired</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:11.756915" elapsed="0.083443"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:11.840702" elapsed="0.073304"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:08.457120" elapsed="3.458164"/>
+</test>
+<test id="s1-s1-s2-s3-t3" name="Enviar Formulario Sin Email" line="32">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:11.916179" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/password/reset'.</msg>
+<arg>${RESET_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:11.916022" elapsed="2.287789"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:14.204476" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:14.204234" elapsed="0.043399"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:15.249401" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:14.247848" elapsed="1.001824"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:15.431119" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/reset_password/3_Enviar%20Formulario%20Sin%20Email.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/reset_password/3_Enviar%20Formulario%20Sin%20Email.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/reset_password/3_Enviar Formulario Sin Email.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:15.250144" elapsed="0.181092"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:15.434889" level="INFO">Current location is 'https://www.blazedemo.com/password/reset'.</msg>
+<arg>${RESET_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:15.431430" elapsed="0.003522"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:15.435093" elapsed="0.068537"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:11.915641" elapsed="3.588285"/>
+</test>
+<status status="PASS" start="2025-03-30T19:57:05.716411" elapsed="9.788046"/>
+</suite>
+<suite id="s1-s1-s2-s4" name="Validate Login" source="/Users/cahernandezv/Downloads/blazedemo/test/web/simples/validate_login.robot">
+<test id="s1-s1-s2-s4-t1" name="Cargar Página De Login" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:15.507622" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:15.507528" elapsed="2.329761"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:17.839646" level="INFO">Page title is 'BlazeDemo'.</msg>
+<arg>BlazeDemo</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-03-30T19:57:17.837645" elapsed="0.002045"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:17.844174" level="INFO">Current page contains element 'name=email'.</msg>
+<arg>name=email</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:17.839802" elapsed="0.004589"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:17.850898" level="INFO">Current page contains element 'name=password'.</msg>
+<arg>name=password</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:17.844803" elapsed="0.006340"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:17.856222" level="INFO">Current page contains element 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:17.851621" elapsed="0.004661"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:18.859331" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:17.856519" elapsed="1.003076"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:18.990403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/validate_login/1_Cargar%20P%C3%A1gina%20De%20Login.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/validate_login/1_Cargar%20P%C3%A1gina%20De%20Login.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/validate_login/1_Cargar Página De Login.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:18.860028" elapsed="0.130443"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:18.990608" elapsed="0.072873"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:15.507366" elapsed="3.556265"/>
+</test>
+<test id="s1-s1-s2-s4-t2" name="Login Con Credenciales Dummy" line="24">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:19.064034" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:19.063934" elapsed="1.356990"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:20.421571" level="INFO">Typing text 'prueba@demo.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:20.421302" elapsed="0.095986"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:20.517722" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:20.517569" elapsed="0.025167"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:21.544677" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:20.542924" elapsed="1.002052"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:21.678324" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/validate_login/2_Login%20Con%20Credenciales%20Dummy.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/validate_login/2_Login%20Con%20Credenciales%20Dummy.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/validate_login/2_Login Con Credenciales Dummy.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:21.545596" elapsed="0.132803"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:21.678644" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:21.678535" elapsed="0.515815"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Page Expired</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-30T19:57:22.194923" elapsed="0.013671"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:22.209029" elapsed="0.087996"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:19.063753" elapsed="3.233586"/>
+</test>
+<test id="s1-s1-s2-s4-t3" name="Login Sin Completar Campos" line="35">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:22.299057" level="INFO">Opening browser 'chrome' to base url 'https://www.blazedemo.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T19:57:22.298428" elapsed="2.198206"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:24.497192" level="INFO">Clicking button 'css=.btn.btn-primary'.</msg>
+<arg>css=.btn.btn-primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T19:57:24.496992" elapsed="0.036385"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-30T19:57:25.534685" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-30T19:57:24.533598" elapsed="1.001354"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-30T19:57:25.698376" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/blazedemo/2025.03.30_19.56.01/validate_login/3_Login%20Sin%20Completar%20Campos.jpg"&gt;&lt;img src="screenshots/blazedemo/2025.03.30_19.56.01/validate_login/3_Login%20Sin%20Completar%20Campos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/blazedemo/${date}/validate_login/3_Login Sin Completar Campos.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-30T19:57:25.535525" elapsed="0.162906"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-03-30T19:57:25.698565" elapsed="0.001773"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-30T19:57:25.700412" elapsed="0.068429"/>
+</kw>
+<status status="PASS" start="2025-03-30T19:57:22.297868" elapsed="3.471267"/>
+</test>
+<status status="PASS" start="2025-03-30T19:57:15.504706" elapsed="10.264921"/>
+</suite>
+<status status="PASS" start="2025-03-30T19:56:44.474885" elapsed="41.295182"/>
+</suite>
+<status status="PASS" start="2025-03-30T19:56:01.946208" elapsed="83.824538"/>
+</suite>
+<status status="PASS" start="2025-03-30T19:56:01.938936" elapsed="83.832992"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="18" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Po">Po</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Comprar Passagem Po">Po.Comprar Passagem Po</stat>
+<stat name="Test" id="s1" pass="18" fail="0" skip="0">Test</stat>
+<stat name="Web" id="s1-s1" pass="18" fail="0" skip="0">Test.Web</stat>
+<stat name="Po" id="s1-s1-s1" pass="7" fail="0" skip="0">Test.Web.Po</stat>
+<stat name="Comprar Ticket Po" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Test.Web.Po.Comprar Ticket Po</stat>
+<stat name="Comprar Ticket Po Ddt" id="s1-s1-s1-s2" pass="6" fail="0" skip="0">Test.Web.Po.Comprar Ticket Po Ddt</stat>
+<stat name="Simples" id="s1-s1-s2" pass="11" fail="0" skip="0">Test.Web.Simples</stat>
+<stat name="Comprar Ticket" id="s1-s1-s2-s1" pass="1" fail="0" skip="0">Test.Web.Simples.Comprar Ticket</stat>
+<stat name="Register" id="s1-s1-s2-s2" pass="4" fail="0" skip="0">Test.Web.Simples.Register</stat>
+<stat name="Reset Password" id="s1-s1-s2-s3" pass="3" fail="0" skip="0">Test.Web.Simples.Reset Password</stat>
+<stat name="Validate Login" id="s1-s1-s2-s4" pass="3" fail="0" skip="0">Test.Web.Simples.Validate Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-06-21T18:24:15.471567" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg time="2024-06-21T18:24:17.859209" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>

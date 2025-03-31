@@ -2,5 +2,5 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${titulo_secao_purchase_data}    css=h1
+${title_purchase_data}    css=h1
 
